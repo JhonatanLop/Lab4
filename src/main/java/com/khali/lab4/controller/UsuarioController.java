@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.khali.lab4.entity.Usuario;
 import com.khali.lab4.service.UsuarioService;
 
-import lombok.AllArgsConstructor;
-
 @RestController
 @RequestMapping(value = "/usuario")
 // diz quem pode acessar
