@@ -12,7 +12,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "aut_autorizacao")
 public class Autorizacao {
@@ -33,12 +37,5 @@ public class Autorizacao {
     public Autorizacao(){
         setUsuarios(new HashSet<Usuario>());
     }
-
-    public Set<Usuario> getUsuarios() { return usuarios; }
-    public Long getId() { return id; }
-    public String getNome() { return nome; }
-    public void setUsuarios(Set<Usuario> usuarios) { this.usuarios = usuarios; }
-    public void setId(Long id) { this.id = id; }
-    public void setNome(String nome) { this.nome = nome; }
     
 }

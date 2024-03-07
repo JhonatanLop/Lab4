@@ -2,8 +2,6 @@ package com.khali.lab4.entity;
 
 import java.time.LocalDateTime;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,7 +10,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "ant_anotacao")
 public class Anotacao {
@@ -31,12 +33,4 @@ public class Anotacao {
     @ManyToOne
     @JoinColumn(name = "ant_usr_id")
     private Usuario usuario;
-
-    public long getId() { return id; }
-    public String getTexto() { return texto; }
-    public LocalDateTime getDataHora() { return dataHora; }
-    public Usuario getUsuario() { return usuario; }
-    public void setId(long id) { this.id = id; }
-    public void setTexto(String texto) { this.texto = texto; }
-    public void setDataHora(LocalDateTime dataHora) { this.dataHora = dataHora; }
-    public void setUsuario(Usuario usuario) { this.usuario = usuario; }}
+}
